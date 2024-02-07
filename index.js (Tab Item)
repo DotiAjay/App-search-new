@@ -1,0 +1,23 @@
+// Write your code here
+
+import {Component} from 'react'
+import './index.css'
+
+class TabItem extends Component {
+  render() {
+    const {tabList, onCurrentTab} = this.props
+    const {tabId, displayText} = tabList
+    const ActiveTab = () => {
+      onCurrentTab(tabId)
+    }
+    return (
+      <li key={tabId}>
+        <button className="button" onClick={ActiveTab}>
+          {displayText}{' '}
+        </button>
+      </li>
+    )
+  }
+}
+
+export default TabItem
