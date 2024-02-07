@@ -1,0 +1,21 @@
+// Write your code here
+
+import {Component} from 'react'
+import './index.css'
+
+class AppItem extends Component {
+  render() {
+    const {details} = this.props
+    const {appName, imageUrl, id} = details
+
+    return (
+      <li key={id}>
+        <div className="AppItemContainer">
+          <img src={imageUrl} className="img" alt={appName} />
+          <p className="name">{appName}</p>
+        </div>
+      </li>
+    )
+  }
+}
+export default AppItem
